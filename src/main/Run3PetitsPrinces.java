@@ -1,5 +1,13 @@
 package main;
 
+import client.Joueur;
+import client.PetitPrince;
+import client.PetitPrince0;
+import client.TestArbitre;
+import jeu.JeuDe;
+import jeu.JeuShifumi;
+import jeu.JeuSimple;
+
 //import petitPrince.PetitPrince0;
 //import petitPrince.PetitPrince;
 
@@ -26,9 +34,19 @@ public class Run3PetitsPrinces {
 		System.out.println("BEGIN : Petit Prince 2 \n");
 		
 		scenario0();
-//		scenario1();
+
+		PetitPrince pp1 = new PetitPrince("Franck");
+		pp1.run();
+		PetitPrince pp2 = new PetitPrince("");
+		pp2.run();
 		
 		System.out.println("\nEND \n");
+		
+		TestArbitre ta = new TestArbitre();
+		JeuDe jeu1 = new JeuDe();
+		JeuShifumi jeu2 = new JeuShifumi();
+		ta.arbitrer( pp1, pp2, jeu1);
+		ta.arbitrer( pp1, pp2, jeu2);
 	}
 
 }
